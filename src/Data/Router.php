@@ -16,14 +16,14 @@ class Router
     /**
      * 支付提交地址
      */
-    const BANK_CARD = 'api/payment/v1/order-realtime';
+    const BANK_CARD = 'api/payment/v1/order-bankpay';
     const ALI_PAY   = 'api/payment/v1/order-alipay';
     const WX_PAY    = 'api/payment/v1/order-wxpay';
 
     /**
-     * 订单查询
+     * 查询单笔订单信息
      */
-    const QUERY_REALTIME_ORDER = 'api/payment/v1/query-realtime-order';
+    const QUERY_REALTIME_ORDER = 'api/payment/v1/query-order';
 
     /**
      * 余额查询
