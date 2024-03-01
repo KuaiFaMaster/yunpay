@@ -9,6 +9,8 @@ class Router
     const AIC_SERVICE_URL = 'https://api-aic.yunzhanghu.com';
     //其他接口serverroot
      const SERVICE_URL = 'https://api-jiesuan.yunzhanghu.com';
+     //商业保险
+    const INS_SERVICE_URL = 'https://api-ins.yunzhanghu.com';
 
     //+----------------------------------
     //|  打款接⼝
@@ -187,11 +189,28 @@ class Router
     const AIC_STATUS = 'api/yzh/aic/status';
 
 
+    //+----------------------------------
+    //|  商业保险
+    //+----------------------------------
+
+    /**
+     * 创建/查询保单
+     */
+    const INS_POLICY = 'api/ins/v2/policy';
+
+    /**
+     * 删除测试保单
+     */
+    const INS_POLICY_DELETE = 'api/ins/v2/policy/delete';
+
+
     public static function getRouter(string $route = ''): string
     {
 
         if (strpos($route,'AIC') !== false)
             return self:: AIC_SERVICE_URL . '/' . $route;
+        elseif (strpos($route,'ins') !== false)
+            return self:: INS_SERVICE_URL . '/' . $route;
         else
             return self::SERVICE_URL . '/' . $route;
     }
